@@ -1,0 +1,3842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>1ReadTextFile</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2016&#47;07&#47;25 07:41:47.550</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#47;07&#47;25 07:41:47.550</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Last Modified By		: aaaa
+Last Modified Date		: 08&#47;01&#47;2016
+Reason				: This is new script
+
+Notes on changes		: This is a new script</note>
+      <xloc>11</xloc>
+      <yloc>8</yloc>
+      <width>272</width>
+      <heigth>85</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+This script does following things
+1)Tis Script reads text file which is generated from PDF file 
+2)DEcoding all Pattern and converting into csv File.</note>
+      <xloc>328</xloc>
+      <yloc>4</yloc>
+      <width>359</width>
+      <heigth>70</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+Getting Text file as input</note>
+      <xloc>92</xloc>
+      <yloc>323</yloc>
+      <width>150</width>
+      <heigth>40</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+Combining Username and 
+rest data into one straem.</note>
+      <xloc>730</xloc>
+      <yloc>302</yloc>
+      <width>172</width>
+      <heigth>55</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note> Filling blank data </note>
+      <xloc>497</xloc>
+      <yloc>436</yloc>
+      <width>115</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+Slice Email 
+ID from String</note>
+      <xloc>52</xloc>
+      <yloc>832</yloc>
+      <width>90</width>
+      <heigth>55</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+Seperate 
+UserID  string,
+Decode 
+&quot;As Filed (Binder)&quot; 
+data</note>
+      <xloc>238</xloc>
+      <yloc>754</yloc>
+      <width>127</width>
+      <heigth>100</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Decode Account Status</note>
+      <xloc>307</xloc>
+      <yloc>708</yloc>
+      <width>146</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Replace Null value 
+with crossponding data</note>
+      <xloc>474</xloc>
+      <yloc>694</yloc>
+      <width>143</width>
+      <heigth>40</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>
+OIT_user-role-resource 
+ output with emailID</note>
+      <xloc>40</xloc>
+      <yloc>543</yloc>
+      <width>156</width>
+      <heigth>55</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>0</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <order>
+  <hop> <from>Add sequence</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>GetData</from><to>Add sequence</to><enabled>Y</enabled> </hop>  <hop> <from>GetData</from><to>Grarbage collection</to><enabled>Y</enabled> </hop>  <hop> <from>Get_Account_status</from><to>GetData</to><enabled>Y</enabled> </hop>  <hop> <from>Add sequence 2</from><to>usernme</to><enabled>Y</enabled> </hop>  <hop> <from>Get Resname1 Data</from><to>alldata</to><enabled>Y</enabled> </hop>  <hop> <from>GetUserID</from><to>Add sequence 2</to><enabled>Y</enabled> </hop>  <hop> <from>Group by</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string</from><to>Get Resname1 Data</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string</from><to>GetUserID</to><enabled>Y</enabled> </hop>  <hop> <from>Stream lookup</from><to>Group by</to><enabled>Y</enabled> </hop>  <hop> <from>alldata</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>usernme</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Replace in string</to><enabled>Y</enabled> </hop>  <hop> <from>AFBinder_decodes</from><to>AFBinder_errorHandlng_decodes</to><enabled>Y</enabled> </hop>  <hop> <from>AFBinder_errorHandlng_decodes</from><to>Split field to rows</to><enabled>Y</enabled> </hop>  <hop> <from>AllCharts_Decodes</from><to>AllEntityBinders_decodes</to><enabled>Y</enabled> </hop>  <hop> <from>AllEntityBinders_decodes</from><to>AFBinder_decodes</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>garbage_clctr</to><enabled>Y</enabled> </hop>  <hop> <from>Group by 2</from><to>Unique rows</to><enabled>Y</enabled> </hop>  <hop> <from>groupUsers</from><to>Group by 2</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string 2</from><to>Replace in string 2 2</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string 2 2</from><to>AllCharts_Decodes</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string 3</from><to>Select values 3 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 3</from><to>Replace in string 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 3 2</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 4</from><to>String operations</to><enabled>Y</enabled> </hop>  <hop> <from>Split field to rows</from><to>Select_values</to><enabled>Y</enabled> </hop>  <hop> <from>String operations</from><to>DynamicOutputFileName</to><enabled>Y</enabled> </hop>  <hop> <from>Unique rows</from><to>Select values 3</to><enabled>Y</enabled> </hop>  <hop> <from>js2</from><to>js3</to><enabled>Y</enabled> </hop>  <hop> <from>js3</from><to>Replace in string 3</to><enabled>Y</enabled> </hop>  <hop> <from>js1</from><to>js2</to><enabled>Y</enabled> </hop>  <hop> <from>remove_and,</from><to>Select values 4</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>groupUsers</to><enabled>Y</enabled> </hop>  <hop> <from>DynamicOutputFileName</from><to>Replace in string 2 3</to><enabled>Y</enabled> </hop>  <hop> <from>Select_values</from><to>Email</to><enabled>Y</enabled> </hop>  <hop> <from>Email</from><to>js1</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows 2</from><to>remove_and,</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string 2 3</from><to>Allow only Enabled Account</to><enabled>Y</enabled> </hop>  <hop> <from>Allow only Enabled Account</from><to>input_oit</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>AFBinder_decodes</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#Delete#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#Delete#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#Delete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#Y#Y#N#</replace_string>
+        <replace_by_string>#Create#EditCharts#Edit_Fedral_TAS#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#Y#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_EditCharts</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Create</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#Y#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_EditCharts</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Delete#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#Y#N#N#N#N#</replace_string>
+        <replace_by_string>#AFB_Delete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_Fedral_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_EditCharts#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_EditCharts##AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#Y#N#N#N#</replace_string>
+        <replace_by_string>#AFB_EditCharts</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#Y#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#Y#Y#N#</replace_string>
+        <replace_by_string>#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#Y#N#Y#</replace_string>
+        <replace_by_string>#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#Y#N#N#</replace_string>
+        <replace_by_string>#AFB_Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#N#Y#N#</replace_string>
+        <replace_by_string>#AFB_Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#N#N#Y#</replace_string>
+        <replace_by_string>#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#N#N#N#N#N#N#</replace_string>
+        <replace_by_string>#AFB_NO_permission</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#Y#N#Y#Y#</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_EditCharts#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>594</xloc>
+      <yloc>855</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>AFBinder_errorHandlng_decodes</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#Y#N#Y#Y#Y</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Delete#AFB_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder#Y#N#N#Y#Y#Y</replace_string>
+        <replace_by_string>#AFB_Create#AFB_Edit_Fedral_TAS#AFB_Edit_State_TAS#AFB_Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>531</xloc>
+      <yloc>800</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>serial_no</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>258</xloc>
+      <yloc>210</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add sequence 2</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>valuename</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>609</xloc>
+      <yloc>337</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>AllCharts_Decodes</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#N#N#N</replace_string>
+        <replace_by_string>#AllChartsNO_permission</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#Y#Y#Y</replace_string>
+        <replace_by_string>#AllChartsCreate#AllChartsDelete#AllChartsEdit</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#Y#Y#N</replace_string>
+        <replace_by_string>#AllChartsCreate#AllChartsDelete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#Y#N#N</replace_string>
+        <replace_by_string>#AllChartsCreate</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#N#N#Y</replace_string>
+        <replace_by_string>#AllChartsEdit</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#N#Y#Y</replace_string>
+        <replace_by_string>#AllChartsDelete#AllChartsEdit</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#Y#N#Y</replace_string>
+        <replace_by_string>#AllChartsCreate#AllChartsEdit</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts#N#Y#N</replace_string>
+        <replace_by_string>#AllChartsDelete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>811</xloc>
+      <yloc>827</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>AllEntityBinders_decodes</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#Y#Y#Y</replace_string>
+        <replace_by_string>#Create#Delete#Edit_Fedral_TAS#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#Y#Y#N</replace_string>
+        <replace_by_string>#Create#Delete#Edit_Fedral_TAS#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#Y#N#Y</replace_string>
+        <replace_by_string>#Create#Delete#Edit_Fedral_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#Y#N#N</replace_string>
+        <replace_by_string>#Create#Delete#Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#N#Y#Y</replace_string>
+        <replace_by_string>#Create#Delete#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#N#Y#N</replace_string>
+        <replace_by_string>#Create#Delete#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#N#N#Y</replace_string>
+        <replace_by_string>#Create#Delete#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#Y#N#N#N</replace_string>
+        <replace_by_string>#Create#Delete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#Y#Y#Y</replace_string>
+        <replace_by_string>#Create#Edit_Fedral_TAS#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#Y#Y#N</replace_string>
+        <replace_by_string>#Create#Edit_Fedral_TAS#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#Y#N#Y</replace_string>
+        <replace_by_string>#Create#Edit_Fedral_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#Y#N#N</replace_string>
+        <replace_by_string>#Create#Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#N#Y#Y</replace_string>
+        <replace_by_string>#Create#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#N#Y#N</replace_string>
+        <replace_by_string>#Create#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#N#N#Y</replace_string>
+        <replace_by_string>#Create#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#Y#N#N#N#N</replace_string>
+        <replace_by_string>#Create</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#Y#Y#Y</replace_string>
+        <replace_by_string>#Delete#Edit_Fedral_TAS#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#Y#Y#N</replace_string>
+        <replace_by_string>#Delete#Edit_Fedral_TAS#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#Y#N#Y</replace_string>
+        <replace_by_string>#Delete#Edit_Fedral_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#Y#N#N</replace_string>
+        <replace_by_string>#Delete#Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#N#Y#Y</replace_string>
+        <replace_by_string>#Delete#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#N#Y#N</replace_string>
+        <replace_by_string>#Delete#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#N#N#Y</replace_string>
+        <replace_by_string>#Delete#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#Y#N#N#N</replace_string>
+        <replace_by_string>#Delete</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#Y#Y#Y</replace_string>
+        <replace_by_string>#Edit_Fedral_TAS#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#Y#Y#N</replace_string>
+        <replace_by_string>#Edit_Fedral_TAS#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#Y#N#Y</replace_string>
+        <replace_by_string>#Edit_Fedral_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#Y#N#N</replace_string>
+        <replace_by_string>#Edit_Fedral_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#N#Y#Y</replace_string>
+        <replace_by_string>#Edit_State_TAS#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#N#Y#N</replace_string>
+        <replace_by_string>#Edit_State_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#N#N#Y</replace_string>
+        <replace_by_string>#Edit_Intl_TAS</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AEBinder#N#N#N#N#N</replace_string>
+        <replace_by_string>#NO_permission</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>703</xloc>
+      <yloc>807</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Allow only Enabled Account</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <leftvalue>Account_Status</leftvalue>
+   <function>REGEXP</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>^Enable</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>95</xloc>
+      <yloc>404</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>DynamicOutputFileName</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+if ((Account_Status == &quot;Disable&quot;))
+{
+var Resname1 =&quot;&quot;;
+
+}
+
+
+&#47;&#47;var OIT_output_File = &quot;${Internal.Job.Filename.Directory}&#47;..&#47;Output&#47;csv&#47;&quot;+ShortFileName+&quot;OIT_user-role-resource.csv&quot;;
+
+&#47;&#47;var OIT_output_File = &quot;${Internal.Job.Filename.Directory}&#47;..&#47;Output&#47;csv&#47;input_OIT_user-role-resource_&quot;+ShortFileName;
+var OIT_output_File = &quot;${Internal.Job.Filename.Directory}&#47;..&#47;Output&#47;csv&#47;input_OIT_user-role-resource_&quot;+ShortFileName;
+
+&#47;&#47;var OIT_output_File2 = &quot;${Internal.Job.Filename.Directory}&#47;..&#47;Output&#47;csv&#47;csv_OIT_user-role-resource_&quot;+ShortFileName;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>Resname1</name>
+        <rename>Resname1</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>OIT_output_File</name>
+        <rename>OIT_output_File</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>OIT_output_File2</name>
+        <rename>OIT_output_File2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>331</xloc>
+      <yloc>398</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Email</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var data = Resname1;
+
+
+var start_Index = indexOf(data, &quot;EMail &quot;);
+
+var End_Index = indexOf(data, &quot;.com&quot;);
+
+if (start_Index &gt;= 0)
+{
+var Email = substr(data,start_Index,(End_Index - start_Index)) + &quot;.com&quot;;
+  &#47;&#47;var Email1  = data.slice(start_Index, End_Index)+ &quot;.com&quot;;
+}
+&#47;&#47;else {Email=&quot;&quot;}
+&#47;&#47;else if (Email= &quot;.com&quot;){Email=&quot;&quot;}
+</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>data</name>
+        <rename>data</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>start_Index</name>
+        <rename>start_Index</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>End_Index</name>
+        <rename>End_Index</rename>
+        <type>Integer</type>
+        <length>9</length>
+        <precision>0</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Email</name>
+        <rename>Email</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>85</xloc>
+      <yloc>797</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>garbage_clctr</send_true_to>
+<send_false_to>Filter rows 2</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>Resname1</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>User:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Resname1</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>Enable</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>623</xloc>
+      <yloc>577</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <leftvalue>Resname1</leftvalue>
+   <function>IS NOT NULL</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>Enable</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>623</xloc>
+      <yloc>488</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Resname1 Data</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>User:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>Admin:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Account_Status</leftvalue>
+     <function>=</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>Global Rights Create Delete</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>All Entities&#47;Binders</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>All Charts</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>As Filed (Binder)</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>606</xloc>
+      <yloc>213</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GetData</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Add sequence</send_true_to>
+<send_false_to>Grarbage collection</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>User:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>U s e r : </text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>Admin:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>=</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>Global Rights Create Delete</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>All Entities&#47;Binders</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>All Charts</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>OR</operator>
+     <leftvalue>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>As Filed (Binder)</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>154</xloc>
+      <yloc>212</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GetUserID</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>Account_Status</leftvalue>
+     <function>CONTAINS</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>User:</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>479</xloc>
+      <yloc>337</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get_Account_status</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>;</separator>
+    <enclosure>&quot;</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>N</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>mixed</format>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>${Internal.Job.Filename.Directory}\..\Output\text\</name>
+      <filemask>.*.txt</filemask>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>86</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName>ShortFileName</shortFileFieldName>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>151</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Grarbage collection</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>55</xloc>
+      <yloc>205</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>Y</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>grp</prefix>
+      <add_linenr>Y</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>Y</give_back_row>
+      <group>
+        <field>
+          <name>userName</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>new</aggregate>
+          <subject>userName</subject>
+          <type>CONCAT_COMMA</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>930</xloc>
+      <yloc>266</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by 2</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>Y</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>grp</prefix>
+      <add_linenr>Y</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>Y</give_back_row>
+      <group>
+        <field>
+          <name>abc</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate> temp1</aggregate>
+          <subject>groupedUser</subject>
+          <type>CONCAT_COMMA</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>859</xloc>
+      <yloc>484</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Account_Status</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>U s e r : </replace_string>
+        <replace_by_string>User:</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>477</xloc>
+      <yloc>212</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string 2</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Disabled: Y</replace_string>
+        <replace_by_string>#Disabled</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Disabled: N</replace_string>
+        <replace_by_string>#Enable</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Global Rights Create Delete</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: N</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Y</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>All Charts</replace_string>
+        <replace_by_string>AllCharts</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>All Entities&#47;Binders</replace_string>
+        <replace_by_string>AEBinder</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string> Y</replace_string>
+        <replace_by_string>#Y</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string> N</replace_string>
+        <replace_by_string>#N</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>As Filed (Binder)</replace_string>
+        <replace_by_string>AFBinder</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>, ,</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>YY</replace_string>
+        <replace_by_string>#Y#Y</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>NN</replace_string>
+        <replace_by_string>#N#N</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Add Groups</replace_string>
+        <replace_by_string>#Admin: Add Groups</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Edit Groups</replace_string>
+        <replace_by_string>#Admin: Edit Groups</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Delete Groups</replace_string>
+        <replace_by_string>#Admin: Delete Groups</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Edit Users</replace_string>
+        <replace_by_string>#Admin: Edit Users</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Delete Users</replace_string>
+        <replace_by_string>#Admin: Delete Users</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Create Administrators</replace_string>
+        <replace_by_string>#Admin: Create Administrators</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Object Permissions</replace_string>
+        <replace_by_string>#Admin: Object Permissions</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Security Options</replace_string>
+        <replace_by_string>#Admin: Security Options</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Admin: Enterprise Control Panel</replace_string>
+        <replace_by_string>#Admin: Enterprise Control Panel</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>EMail: </replace_string>
+        <replace_by_string>#EMail </replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Last Access</replace_string>
+        <replace_by_string>#Last Access</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>792</xloc>
+      <yloc>644</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string 2 2</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>,  </replace_string>
+        <replace_by_string>#</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>N  </replace_string>
+        <replace_by_string>N#</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Y </replace_string>
+        <replace_by_string>Y#</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>N, </replace_string>
+        <replace_by_string>N#</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Y, </replace_string>
+        <replace_by_string>Y#</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>#N </replace_string>
+        <replace_by_string>#N</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>#Y </replace_string>
+        <replace_by_string>#Y</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>#NAllChart</replace_string>
+        <replace_by_string>#N#AllChart</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>#YAllChart</replace_string>
+        <replace_by_string>#Y#AllChart</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder Y</replace_string>
+        <replace_by_string>#AFBinder#Y</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder N</replace_string>
+        <replace_by_string>#AFBinder#N</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name> temp1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFBinder N</replace_string>
+        <replace_by_string>#AFBinder#N</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>797</xloc>
+      <yloc>725</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string 2 3</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>OIT_output_File</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>.txt</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>OIT_output_File</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>.pdf</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>192</xloc>
+      <yloc>407</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string 3</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>userID1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>User:</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>userID1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string> </replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AFB_</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>NO_permission</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>AllCharts</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Email</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>EMail </replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>635</xloc>
+      <yloc>739</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Admin:_N_Disabled:_Y_EMail:_Last_Access:_2014_08_19T13:14:33.657</name>
+        <rename>Account_Status</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>serial_no</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>209</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>new</name>
+        <rename>groupedUser</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>valuename</name>
+        <rename>userNo</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>935</xloc>
+      <yloc>399</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name> temp1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>groupedUser</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>userNo</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>abc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>sl no</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>798</xloc>
+      <yloc>568</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 3 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name> temp1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Resname1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>permiNo</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UserName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Resname2</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>userID1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Account_Status</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>abc</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Account_Status_final</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ResName3</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Create_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Last_Login_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Pwd_Last_Changed_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OwnerID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NamedID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Role_Name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Email</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>625</xloc>
+      <yloc>654</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>userID1</name>
+        <rename>userID</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Account_Status_final</name>
+        <rename>Account_Status</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Create_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Last_Login_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Pwd_Last_Changed_Date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OwnerID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NamedID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Role_Name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Resname1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Resname2</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ResName3</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Email</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>440</xloc>
+      <yloc>485</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select_values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name> temp1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>tushik</name>
+        <rename>Resname1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>rownum</name>
+        <rename>permiNo</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>groupedUser</name>
+        <rename>UserName</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>282</xloc>
+      <yloc>814</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split field to rows</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield> temp1</splitfield>
+   <delimiter>#</delimiter>
+   <newfield>tushik</newfield>
+   <rownum>Y</rownum>
+   <rownum_field>rownum</rownum_field>
+   <resetrownumber>Y</resetrownumber>
+   <delimiter_is_regex>N</delimiter_is_regex>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>390</xloc>
+      <yloc>827</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>usernme</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>userName</name>
+        <field>Account_Status</field>
+      </key>
+      <value>
+        <name>Account_Status</name>
+        <rename>Account_Status</rename>
+        <default>noo</default>
+        <type>String</type>
+      </value>
+      <value>
+        <name>valuename</name>
+        <rename>valuename</rename>
+        <default>num</default>
+        <type>Number</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>805</xloc>
+      <yloc>268</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>String operations</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>userID</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Account_Status</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Create_Date</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Last_Login_Date</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Pwd_Last_Changed_Date</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>OwnerID</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>NamedID</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Role_Name</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>Resname2</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>ResName3</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>326</xloc>
+      <yloc>484</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Unique rows</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <count_rows>Y</count_rows>
+      <count_field>sl no</count_field>
+      <reject_duplicate_row>N</reject_duplicate_row>
+      <error_description/>
+    <fields>      <field>        <name> temp1</name>
+        <case_insensitive>N</case_insensitive>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>750</xloc>
+      <yloc>484</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>alldata</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Account_Status</name>
+        <rename>userName</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShortFileName</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>720</xloc>
+      <yloc>216</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>garbage_clctr</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>694</xloc>
+      <yloc>577</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>groupUsers</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+if (userNo != null)
+{
+var abc =userNo;
+
+}
+
+else if  (userNo==null)
+{
+userNo=abc
+}</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>abc</name>
+        <rename>abc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>858</xloc>
+      <yloc>394</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>input_oit</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>|</separator>
+    <enclosure>&quot;</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>Y</fileNameInField>
+    <fileNameField>OIT_Output_File</fileNameField>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${Internal.Transformation.Filename.Directory}\..\Output\csv\OIT_user-role-resource</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>Y</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>userID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Account_Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Create_Date</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Last_Login_Date</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Pwd_Last_Changed_Date</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>OwnerID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>NamedID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Role_Name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Resname1</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Resname2</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>ResName3</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Email</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>93</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js1</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+var Resname2=&apos;&apos;;
+var str = Resname1;
+var Resname2 = str.replace(&quot;AllChartsEdit&quot;, &quot;AllChars&quot;); 
+
+if ((Resname1==&quot;AllChartsEdit&quot;) ||(Resname1==&quot;AllChartsDelete&quot;) ||(Resname1==&quot;AllChartsCreate&quot;))
+
+{
+Resname2=&quot;All Charts&quot;;
+}
+
+else if ((Resname1==&quot;AFB_Create&quot;) ||(Resname1==&quot;AFB_Delete&quot;) ||(Resname1==&quot;AFB_EditCharts&quot;) ||(Resname1==&quot;AFB_Edit_Fedral_TAS&quot;) ||(Resname1==&quot;AFB_Edit_State_TAS&quot;) ||(Resname1==&quot;AFB_Edit_Intl_TAS&quot;))
+
+
+{
+Resname2=&quot;As Filed (Binder)&quot;;
+}
+
+
+else if ((Resname1==&quot;Create&quot;) ||(Resname1==&quot;Delete&quot;) ||(Resname1==&quot;Edit_Fedral_TAS&quot;) ||(Resname1==&quot;Edit_State_TAS&quot;) ||(Resname1==&quot;Edit_Intl_TAS&quot;))
+
+
+{
+Resname2=&quot;All Entities&#47;Binders&quot;;
+}
+
+else 
+{
+Resname2=&quot;&quot;;
+}
+
+
+
+
+&#47;*User and enable Dissable*&#47;
+
+
+
+    var str = UserName;
+   
+    var userID1 =(str.split(&quot;-&quot;)[0]); 
+
+    &#47;&#47; document.getElementById(&quot;demo&quot;).innerHTML = res;
+&#47;&#47;Alert(Status)
+ 
+
+
+&#47;&#47;var str1 = Resname1;
+&#47;&#47;var n = str.includes(&quot;Enable&quot;); 
+
+
+
+
+
+
+
+
+</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>Resname2</name>
+        <rename>Resname2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>userID1</name>
+        <rename>userID1</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>276</xloc>
+      <yloc>728</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+&#47;&#47;fruits.indexOf(&quot;Apple&quot;); 
+
+if ((Resname1.indexOf) (&quot;Disable&quot;) &gt; -1)
+
+{   
+var Account_Status = &quot;Disable&quot;;
+
+}
+else if ((Resname1.indexOf) (&quot;Enable&quot;) &gt; -1)
+{   
+Account_Status = &quot;Enable&quot;;
+
+}
+else 
+{   
+Account_Status = &quot;&quot;;
+
+}
+</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>Account_Status</name>
+        <rename>Account_Status</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>396</xloc>
+      <yloc>738</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>js3</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+
+if ((Account_Status != &quot;&quot;))
+{
+var abc =Account_Status;
+
+}
+
+else if  (Account_Status==&quot;&quot;)
+{
+Account_Status=abc
+}
+else 
+
+{
+Account_Status=&quot;&quot;
+}
+var Account_Status_final=Account_Status;
+var ResName3 =&quot;OIT - OneSource Income Tax&quot;;
+var Create_Date=&quot;&quot;;
+var Last_Login_Date =&quot;&quot;;
+var Pwd_Last_Changed_Date =&quot;&quot;;
+var OwnerID =&quot;&quot;;
+var NamedID =&quot;&quot;;
+var Role_Name =&quot;&quot;;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>abc</name>
+        <rename>abc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Account_Status_final</name>
+        <rename>Account_Status_final</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ResName3</name>
+        <rename>ResName3</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Create_Date</name>
+        <rename>Create_Date</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Last_Login_Date</name>
+        <rename>Last_Login_Date</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Pwd_Last_Changed_Date</name>
+        <rename>Pwd_Last_Changed_Date</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>OwnerID</name>
+        <rename>OwnerID</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>NamedID</name>
+        <rename>NamedID</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Role_Name</name>
+        <rename>Role_Name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>517</xloc>
+      <yloc>738</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove_and,</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>_</replace_string>
+        <replace_by_string> </replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Resname1</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>,</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+      <field>
+        <in_stream_name>Email</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>^.com</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>yes</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>535</xloc>
+      <yloc>489</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>usernme</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Account_Status</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>valuename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>698</xloc>
+      <yloc>333</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>

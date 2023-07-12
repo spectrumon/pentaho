@@ -1,0 +1,5 @@
+message
+"{""Nmae"":""abhi"",""salary"":""100"",""Location"":""india""}"
+"{""Nmae"":""test"",""salary"":""200"",""Location"":""new delhi""}"
+"{""Nmae"":""testName"",""salary"":""400"",""Location"":""Hyd""}"
+"{""Nmae"":""testname2"",""salary"":""4000"",""Location"":""newyork""}"

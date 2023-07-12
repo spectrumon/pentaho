@@ -1,0 +1,14 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+DEBUG: _PENTAHO_JAVA=C:\Program Files\Java\jdk1.8.0_121\bin\java.exe
+2017/07/05 03:00:01 - Pan - Logging is at level : Basic logging
+2017/07/05 03:00:01 - Pan - Start of run.
+2017/07/05 03:00:01 - jenkins - Dispatching started for transformation [jenkins]
+2017/07/05 03:00:01 - Data Grid.0 - Finished processing (I=0, O=0, R=0, W=7, U=0, E=0)
+2017/07/05 03:00:01 - Text file output.0 - Finished processing (I=0, O=8, R=7, W=7, U=0, E=0)
+2017/07/05 03:00:01 - Pan - Finished!
+2017/07/05 03:00:01 - Pan - Start=2017/07/05 03:00:01.596, Stop=2017/07/05 03:00:01.975
+2017/07/05 03:00:01 - Pan - Processing ended after 0 seconds.
+2017/07/05 03:00:01 - jenkins -  
+2017/07/05 03:00:01 - jenkins - Step Data Grid.0 ended successfully, processed 7 lines. ( - lines/s)
+2017/07/05 03:00:01 - jenkins - Step Text file output.0 ended successfully, processed 7 lines. ( - lines/s)

@@ -1,0 +1,44 @@
+<Schema name="worldAnlysis">
+  <Cube name="World_Analysis" visible="true" cache="true" enabled="true">
+    <Table name="fact_world" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="skey_country" name="Country">
+      <Hierarchy visible="true" hasAll="true" primaryKey="skey_country">
+        <Table name="dim_country" alias="">
+        </Table>
+        <Level name="Country" visible="true" table="dim_country" column="countryName" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="skey_continent" name="Continent">
+      <Hierarchy visible="true" hasAll="true" primaryKey="skey_continent">
+        <Table name="dim_continent" alias="">
+        </Table>
+        <Level name="Continent" visible="true" table="dim_continent" column="continent" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="skey_city" name="City">
+      <Hierarchy visible="true" hasAll="true" primaryKey="skey_city">
+        <Table name="dim_city" alias="">
+        </Table>
+        <Level name="New Level 0" visible="true" table="dim_city" column="CityName" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="skey_district" name="District">
+      <Hierarchy visible="true" hasAll="true" primaryKey="skey_district">
+        <Table name="dim_district" alias="">
+        </Table>
+        <Level name="New Level 0" visible="true" table="dim_district" column="district" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Population" column="CountryPopulation" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="surfaceArea" column="surfaceArea" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="CityPopulation" column="CityPopulation" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
